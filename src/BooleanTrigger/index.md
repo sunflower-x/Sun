@@ -8,7 +8,7 @@ group:
 
 #### 使用场景
 
-两个控件，点击按钮触发 Modal
+用于控制一个控件的 boolean 属性，常用的是一个按钮触发事件然后弹出 Modal 对话框
 
 ```jsx
 /**
@@ -28,7 +28,7 @@ export default () => (
 
 ```jsx
 /**
- * title: 自定义按钮事件
+ * title: 自定义触发按钮事件
  */
 import { BooleanTrigger } from 'Sun';
 import { Button, Modal } from 'antd';
@@ -81,6 +81,8 @@ export default () => {
           confirmLoading={confirmLoading}
           onCancel={handleCancel}
           onOk={handleOk}
+          okText="确定"
+          cancelText="取消"
         >
           我是一个模态对话框
         </Modal>
@@ -90,9 +92,8 @@ export default () => {
 };
 ```
 
-# API
+### API
 
-|   属性名   |     描述     |   类型    | 默认值 |
-| :--------: | :----------: | :-------: | :----: |
-| cancelText | 取消按钮文字 | ReactNode | Cancel |
-|   okText   | 确认按钮文字 | ReactNode |   Ok   |
+|  属性名  |                                描述                                 |   类型    | 默认值 |
+| :------: | :-----------------------------------------------------------------: | :-------: | :----: |
+| children | 子元素，必须包含两个子元素，第一个为触发元素，第二个为类 Modal 元素 | ReactNode |   --   |
