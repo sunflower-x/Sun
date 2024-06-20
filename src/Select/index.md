@@ -119,6 +119,22 @@ export default () => {
 };
 ```
 
+```jsx
+/**
+ * title: KeySelect
+ */
+import { Select } from 'Sun';
+const { KeySelect } = Select;
+
+export default () => {
+  return (
+    <>
+      <KeySelect />
+    </>
+  );
+};
+```
+
 ### API
 
 |    属性名    |                                                                    描述                                                                    |                 类型                 | 默认值 |
