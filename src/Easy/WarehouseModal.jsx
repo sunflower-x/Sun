@@ -63,6 +63,68 @@ const options = [
     ],
   },
 ];
+const dataSource = [
+  {
+    key: '1',
+    id: '123',
+    code: 'John Brown',
+    name: 'aaa店仓',
+  },
+  {
+    key: '2',
+    id: '456',
+    code: 'Jim Green',
+    name: 'xxx店仓',
+  },
+  {
+    key: '1',
+    id: '123',
+    code: 'John Brown',
+    name: 'aaa店仓',
+  },
+  {
+    key: '1',
+    id: '123',
+    code: 'John Brown',
+    name: 'aaa店仓',
+  },
+  {
+    key: '2',
+    id: '456',
+    code: 'Jim Green',
+    name: 'xxx店仓',
+  },
+  {
+    key: '1',
+    id: '123',
+    code: 'John Brown',
+    name: 'aaa店仓',
+  },
+  {
+    key: '1',
+    id: '123',
+    code: 'John Brown',
+    name: 'aaa店仓',
+  },
+  {
+    key: '2',
+    id: '456',
+    code: 'Jim Green',
+    name: 'xxx店仓',
+  },
+  {
+    key: '1',
+    id: '123',
+    code: 'John Brown',
+    name: 'aaa店仓',
+  },
+  {
+    key: '1',
+    id: '123',
+    code: 'John Brown',
+    name: 'aaa店仓',
+  },
+];
 let timeout;
 let currentValue;
 const fetch = (value, callback) => {
@@ -265,6 +327,7 @@ const WarehouseModal = (props) => {
                 </Form.Item>
                 <Form.Item label="收银类型" name="cashType">
                   <Select
+                    placeholder="请选择收银类型"
                     options={[
                       { value: 1, label: '商场收银' },
                       { value: 2, label: '自收银' },
@@ -273,6 +336,7 @@ const WarehouseModal = (props) => {
                 </Form.Item>
                 <Form.Item label="店仓联盟" name="union">
                   <Select
+                    placeholder="请选择店仓联盟"
                     options={[
                       { value: 1, label: '联盟内' },
                       { value: 2, label: '联盟外' },
@@ -281,6 +345,7 @@ const WarehouseModal = (props) => {
                 </Form.Item>
                 <Form.Item label="正特价" name="special">
                   <Select
+                    placeholder="请选择正特价"
                     options={[
                       { value: 1, label: '正价店' },
                       { value: 2, label: '特价店' },
@@ -289,6 +354,7 @@ const WarehouseModal = (props) => {
                 </Form.Item>
                 <Form.Item label="库存管控" name="control">
                   <Select
+                    placeholder="请选择"
                     options={[
                       { value: 1, label: '管控' },
                       { value: 2, label: '不管控' },
@@ -297,6 +363,7 @@ const WarehouseModal = (props) => {
                 </Form.Item>
                 <Form.Item label="进销存结转" name="control">
                   <Select
+                    placeholder="请选择"
                     options={[
                       { value: 1, label: '开启' },
                       { value: 2, label: '不开启' },
@@ -320,147 +387,8 @@ const WarehouseModal = (props) => {
               size="small"
               rowSelection
               rowKey="id"
-              pagination={{ position: ['bottomLeft'], pageSize: 13 }}
-              dataSource={[
-                {
-                  key: '1',
-                  id: '123',
-                  code: 'John Brown',
-                  name: 'aaa店仓',
-                },
-                {
-                  key: '2',
-                  id: '456',
-                  code: 'Jim Green',
-                  name: 'xxx店仓',
-                },
-                {
-                  key: '1',
-                  id: '123',
-                  code: 'John Brown',
-                  name: 'aaa店仓',
-                },
-                {
-                  key: '1',
-                  id: '123',
-                  code: 'John Brown',
-                  name: 'aaa店仓',
-                },
-                {
-                  key: '2',
-                  id: '456',
-                  code: 'Jim Green',
-                  name: 'xxx店仓',
-                },
-                {
-                  key: '1',
-                  id: '123',
-                  code: 'John Brown',
-                  name: 'aaa店仓',
-                },
-                {
-                  key: '1',
-                  id: '123',
-                  code: 'John Brown',
-                  name: 'aaa店仓',
-                },
-                {
-                  key: '2',
-                  id: '456',
-                  code: 'Jim Green',
-                  name: 'xxx店仓',
-                },
-                {
-                  key: '1',
-                  id: '123',
-                  code: 'John Brown',
-                  name: 'aaa店仓',
-                },
-                {
-                  key: '1',
-                  id: '123',
-                  code: 'John Brown',
-                  name: 'aaa店仓',
-                },
-                {
-                  key: '2',
-                  id: '456',
-                  code: 'Jim Green',
-                  name: 'xxx店仓',
-                },
-                {
-                  key: '1',
-                  id: '123',
-                  code: 'John Brown',
-                  name: 'aaa店仓',
-                },
-                {
-                  key: '2',
-                  id: '456',
-                  code: 'Jim Green',
-                  name: 'xxx店仓',
-                },
-                {
-                  key: '1',
-                  id: '123',
-                  code: 'John Brown',
-                  name: 'aaa店仓',
-                },
-                {
-                  key: '2',
-                  id: '456',
-                  code: 'Jim Green',
-                  name: 'xxx店仓',
-                },
-                {
-                  key: '1',
-                  id: '123',
-                  code: 'John Brown',
-                  name: 'aaa店仓',
-                },
-                {
-                  key: '2',
-                  id: '456',
-                  code: 'Jim Green',
-                  name: 'xxx店仓',
-                },
-                {
-                  key: '1',
-                  id: '123',
-                  code: 'John Brown',
-                  name: 'aaa店仓',
-                },
-                {
-                  key: '2',
-                  id: '456',
-                  code: 'Jim Green',
-                  name: 'xxx店仓',
-                },
-                {
-                  key: '1',
-                  id: '123',
-                  code: 'John Brown',
-                  name: 'aaa店仓',
-                },
-                {
-                  key: '2',
-                  id: '456',
-                  code: 'Jim Green',
-                  name: 'xxx店仓',
-                },
-                {
-                  key: '1',
-                  id: '123',
-                  code: 'John Brown',
-                  name: 'aaa店仓',
-                },
-                {
-                  key: '2',
-                  id: '456',
-                  code: 'Jim Green',
-                  name: 'xxx店仓',
-                },
-              ]}
+              pagination={{ position: ['bottomLeft'], pageSize: 10 }}
+              dataSource={dataSource}
               columns={[
                 {
                   title: '店仓编码',
